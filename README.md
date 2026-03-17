@@ -19,8 +19,8 @@ The site is a set of standalone HTML pages with a shared visual style (Avenir Ne
 
 Key pages include:
 
-- **DiMER – Faculty Resource Hub**  
-  Landing page that links to all other DiMER resources for faculty.
+- **index.html**  
+  DiMER – Faculty Resource Hub landing page that links to all other DiMER resources for faculty.
 
 - **DiMER – Student Cognitive Transformations**  
   Narrative overview of the key cognitive shifts we want students to undergo for DiMER-based reasoning.
