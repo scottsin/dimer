@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DiMER: “What’s In It for Me?”</title>
+  <style>
+    :root {
+      /* Typography */
+      --font-heading: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+      /* Neutrals */
+      --white: #FFFFFF;
+      --gray-050: #FAFAFA;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --text-default: #1F2937;
+
+      /* Course colors */
+      --phcy502-fill: #FFF4B8;
+      --phcy502-text: #A67C00;
+      --phcy503-fill: #DDEFD8;
+      --phcy503-text: #2F6B2F;
+      --phcy512-fill: #DCEFFD;
+      --phcy512-text: #13294B;
+
+      /* Layout */
+      --page-maxw: 980px;
+      --card-radius: 12px;
+      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--gray-050);
+      color: var(--text-default);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: var(--page-maxw);
+      margin: 0 auto;
+      padding: 28px 24px 56px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 26px 22px;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--gray-700);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 16px 0 8px;
+    }
+
+    .subtitle {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--gray-500);
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 0.98rem;
+    }
+
+    ul {
+      margin: 6px 0 12px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+      font-size: 0.96rem;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+
+    .pill-row {
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-right: 8px;
+      margin-bottom: 4px;
+    }
+
+    .pill-basic-503 {
+      background: var(--phcy503-fill);
+      color: var(--phcy503-text);
+    }
+
+    .pill-basic-512 {
+      background: var(--phcy512-fill);
+      color: var(--phcy512-text);
+    }
+
+    .pill-clinical-502 {
+      background: var(--phcy502-fill);
+      color: var(--phcy502-text);
+    }
+
+    .pill-shared {
+      background: var(--gray-100);
+      color: var(--gray-700);
+    }
+
+    .benefit-block {
+      border-radius: 10px;
+      padding: 14px 16px 12px;
+      margin-bottom: 14px;
+      border-left: 4px solid var(--gray-200);
+      background: var(--gray-100);
+    }
+
+    .benefit-title {
+      font-family: var(--font-heading);
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .benefit-lede {
+      font-size: 0.96rem;
+      margin-bottom: 6px;
+    }
+
+    .role-heading {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 6px;
+    }
+
+    .jump-links {
+      background: var(--gray-100);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 10px;
+    }
+
+    .jump-links p {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-500);
+      margin-bottom: 6px;
+    }
+
+    .jump-links a {
+      display: inline-block;
+      margin-right: 14px;
+      margin-bottom: 4px;
+      color: var(--phcy512-text);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .jump-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        padding: 18px 14px 40px;
+      }
+      .card {
+        padding: 20px 18px 18px;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--white);
+      }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+      .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <!-- Intro -->
+    <section class="card">
+      <h1>DiMER: “What’s In It for Me?”</h1>
+      <p class="subtitle">How the Disease → Mechanism → Exposure → Response framework helps different faculty roles</p>
+
+      <p>
+        DiMER is not just another layer of jargon or a new set of slides to build. It is a shared reasoning structure that makes each course’s contribution more visible, more consequential, and easier to coordinate. This page summarizes the concrete benefits by role.
+      </p>
+
+      <div class="jump-links">
+        <p>Quick navigation</p>
+        <a href="#basic-faculty">Basic science faculty</a>
+        <a href="#clinical-faculty">Clinical faculty &amp; practitioners</a>
+        <a href="#shared-benefit">Shared mental model</a>
+      </div>
+    </section>
+
+    <!-- Basic Science Faculty -->
+    <section class="card" id="basic-faculty">
+      <div class="role-heading">For basic science faculty (PHCY 503 + 512)</div>
+      <div class="pill-row">
+        <span class="pill pill-basic-503">CBMC</span>
+        <span class="pill pill-basic-512">DPMP</span>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">1. Your science is visibly consequential, immediately</div>
+        <p class="benefit-lede">
+          DiMER makes the use case for your content explicit.
+        </p>
+        <p>
+          Every pathophysiologic mechanism, drug‑action concept, or formulation/device property is mapped to a specific link in the D→M→E→R chain and to one of the three hypotheses students must articulate that week (pharmacotherapeutic, target‑engagement, or exposure–response). In shared cases, you can see exactly how your session enables a concrete hypothesis for that disease, rather than sitting as “background science.”
+        </p>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">2. You know the endpoint you are teaching toward</div>
+        <p class="benefit-lede">
+          The goal is a traversable chain, not “covering chapter 5.”
+        </p>
+        <p>
+          The 3×4 matrix and “railroad‑track” model define a clear target state: students should be able to traverse Disease → Mechanism → Exposure → Response for that week’s case. The endpoint becomes: “Students can use this mechanism or delivery concept as part of a D→M, M→E, or E→R hypothesis for the asthma/COPD (or diabetes, etc.) case,” not simply “they heard this lecture.”
+        </p>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">3. You contribute to the reasoning architecture, not just content</div>
+        <p class="benefit-lede">
+          DiMER, Bayes, and MDP give you a way to shape how students think, not only what they know.
+        </p>
+        <p>
+          DiMER sits alongside Bayesian and MDP‑style thinking as an explicit reasoning framework; non‑clinical scientists can help design how we define mechanistic states, how we talk about plausibility and uncertainty, and how we model state → action → consequence at the level of targets, pathways, or delivery strategies (without any PK math). This moves you from “content provider” to co‑architect of the reasoning process (for example, crafting hypothesis prompts, simple state diagrams, or “if we perturb here, what happens there?” exercises).
+        </p>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">4. Better alignment with your identity as a scientist</div>
+        <p class="benefit-lede">
+          You get to teach as a mechanistic scientist, not a quasi‑clinician.
+        </p>
+        <p>
+          DiMER lets you frame sessions in a way that matches how you actually think: “Here is the causal story we believe; here is the hypothesis that story supports about therapy or delivery; here is what we would expect to observe if we are right or wrong.” That can feel more authentic than trying to approximate bedside teaching before you are ready for that role, while still clearly serving clinical training needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Clinical Faculty -->
+    <section class="card" id="clinical-faculty">
+      <div class="role-heading">For clinical faculty and practitioners (PHCY 502)</div>
+      <div class="pill-row">
+        <span class="pill pill-clinical-502">DPET + PACE</span>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">1. You “close the loop” each week</div>
+        <p class="benefit-lede">
+          You help students see what happens when the D→M→E→R chain meets a real patient.
+        </p>
+        <p>
+          Clinicians enter at the Response and MTP end, using concrete cases to show how a good pharmacotherapeutic (D→M) hypothesis can still fail because the target‑engagement (M→E) or exposure–response (E→R) hypothesis was wrong. Real MTPs often signal which link in the chain broke—wrong disease story, wrong mechanism, or wrong assumptions about delivery or response—and you are positioned to make that visible.
+        </p>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">2. You get students who arrive “pre‑structured”</div>
+        <p class="benefit-lede">
+          Less time patching basics; more time on judgment and complexity.
+        </p>
+        <p>
+          Instead of teaching care plans from scratch, you receive learners who can already state disease mechanisms at a usable clinical level (D), propose mechanistically justified regimens (M), anticipate straightforward exposure and delivery challenges (E), and predict plausible clinical responses and monitoring targets (R). That frees your time for judgment, nuance, and patient complexity, rather than repairing basic integration gaps.
+        </p>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">3. You can model clinical Bayesian and sequential thinking</div>
+        <p class="benefit-lede">
+          The shared Bayes/MDP skeleton gives you a natural way to narrate your reasoning.
+        </p>
+        <p>
+          Using the shared Bayes/MDP skeleton, you can demonstrate how new clinical data shifts belief between illness scripts or MTP explanations (“Is this poor control due to wrong mechanism or inadequate delivery?”) and how you think in terms of actions over time (step‑up/step‑down therapy, device changes, follow‑up intervals) rather than one‑off decisions. You become the lived example of “this is what it looks like when someone actually uses D→M→E→R + Bayes + sequential planning in practice.”
+        </p>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">4. Your contribution is focused and impactful</div>
+        <p class="benefit-lede">
+          You are not a scattered guest speaker—you are the closer.
+        </p>
+        <p>
+          Rather than being dropped in as isolated guest lectures, you are positioned as the person who interprets the full DiMER chain in a patient, interrogates and refines students’ three hypotheses, and ties MTPs back to specific weak links (disease understanding, mechanism choice, delivery assumptions, or expectations of response). That focus makes your involvement feel more targeted and respectful of limited clinical time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Shared Mental Model -->
+    <section class="card" id="shared-benefit">
+      <div class="role-heading">Cross‑cutting benefit: a shared mental model for everyone</div>
+      <div class="pill-row">
+        <span class="pill pill-shared">Shared language</span>
+      </div>
+
+      <div class="benefit-block">
+        <div class="benefit-title">A common language and visual for integration</div>
+        <p class="benefit-lede">
+          DiMER and its companion frameworks reduce friction in how we talk about students and curriculum.
+        </p>
+        <p>
+          Basic and clinical faculty share a common language (DiMER, the three hypotheses, MTPs, Bayes, MDP) and a common visual (the railroad track). That lowers coordination friction: when someone says “students are weak on exposure,” everyone understands this as “students are struggling with the Mechanism→Exposure link in DiMER,” not “they need a full PK course,” and we can plan targeted responses rather than course‑level overhauls.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Cognitive Load Rationale for DiMER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --font-heading: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+      --white: #FFFFFF;
+      --gray-050: #FAFAFA;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --text-default: #1F2937;
+
+      --rose: #E8C7CC;
+      --brick-red: #8E2C2C;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--gray-050);
+      font-family: var(--font-body);
+      color: var(--text-default);
+      line-height: 1.5;
+    }
+
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px 24px 28px;
+    }
+
+    .card-border-top-neutral {
+      border-top: 6px solid var(--gray-700);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      margin-top: 0;
+      color: var(--gray-700);
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      margin-bottom: 1.0rem;
+    }
+
+    .abstract {
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      margin-bottom: 1.5rem;
+    }
+
+    .course-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      margin-bottom: 0.75rem;
+      background: var(--gray-100);
+      color: var(--gray-700);
+    }
+
+    p {
+      margin: 0 0 0.9rem;
+      font-size: 0.97rem;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .section {
+      margin-top: 1.4rem;
+    }
+
+    .section h2 {
+      margin-bottom: 0.45rem;
+    }
+
+    .section h3 {
+      margin-top: 0.4rem;
+    }
+
+    ul {
+      margin: 0.35rem 0 0.9rem 1.2rem;
+      padding: 0;
+      font-size: 0.97rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    .inline-list {
+      margin-top: 0.3rem;
+    }
+
+    .callout {
+      margin-top: 1.4rem;
+      padding: 12px 14px;
+      border-left: 4px solid var(--brick-red);
+      background: var(--rose);
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: var(--gray-700);
+    }
+
+    .callout-title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .blockquote {
+      margin: 0.6rem 0 0.9rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--gray-200);
+      font-size: 0.96rem;
+      color: var(--gray-700);
+    }
+
+    .footer-note {
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <article class="card card-border-top-neutral">
+      <div class="course-tag">
+        Cognitive Load &amp; DiMER
+      </div>
+
+      <h1>The Cognitive Load Rationale for DiMER</h1>
+      <p class="page-subtitle">
+        Why a simple, repeated D→M→E→R structure is necessary before students can truly integrate 502, 503, and 512.
+      </p>
+
+      <p class="abstract">
+        <strong>Abstract.</strong> Students are currently asked to integrate three parallel content streams—pathophysiology (502), drug action (503), and pharmaceutics (512)—in ways that exceed the limits of working memory. Cognitive load theory tells us novices can juggle only a small number of unconnected items at once; beyond that, learning collapses into rote memorization. DiMER (Disease → Mechanism → Exposure → Response) provides a simple, repeated scaffold that anchors terminology, supports causal links, and progressively compresses many small facts into larger chunks, schema, and scripts. This makes genuine integration cognitively possible rather than aspirational.
+      </p>
+
+      <div class="section">
+        <h2>The Hidden Obstacle to Integration</h2>
+        <p>
+          When we ask students to “integrate” content from three parallel courses—pathophysiology (502), drug action (503), and pharmaceutics (512)—we are asking them to do something that is effectively <strong>cognitively impossible</strong> under current conditions.
+          The obstacle is not motivation or effort; it is a mismatch between what we are asking them to hold in mind and what working memory can realistically support.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>The Working Memory Bottleneck</h2>
+        <p>
+          Working memory is the “mental workspace” where active thinking happens, and it is <strong>severely limited</strong>.
+          Cognitive load theory and decades of research converge on a few key points.
+        </p>
+        <ul>
+          <li>Novice learners can juggle only <strong>4–7 separate items</strong> at once before performance degrades.</li>
+          <li>When working memory is overloaded, learning stops: students cannot form connections, cannot build understanding, and resort to rote memorization.</li>
+          <li>Experts bypass this limit by working with <strong>large, integrated chunks</strong> stored in long-term memory—not by having bigger working memory.</li>
+        </ul>
+        <p>
+          The gap between novices and experts is therefore not just “more knowledge”; it is how that knowledge is <strong>chunked and organized</strong>.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>The Current Problem: Unstructured Parallel Streams</h2>
+        <p>
+          Right now, 502, 503, and 512 each introduce large volumes of terminology and concepts <strong>without a shared organizing structure</strong>.
+        </p>
+        <ul>
+          <li>Students hear about β₂ receptors, eosinophils, type 2 inflammation, particle size, ICS, LABA, DPI, airway obstruction, FEV₁, device technique—all in the same weeks, from different instructors, in different contexts.</li>
+          <li>These terms remain <strong>isolated, floating chunks</strong> in working memory because there is no clear “home” for them.</li>
+          <li>With 15–20+ unconnected items competing for space in a system that can hold 4–7, <strong>cognitive overload is inevitable</strong>.</li>
+        </ul>
+        <p>
+          The result is that “integrate across courses” becomes a vague aspiration rather than a cognitively supported task.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>The Cascade of Consequences</h2>
+        <p>
+          When working memory is overloaded, a predictable cascade occurs.
+        </p>
+
+        <h3>1. They cannot stabilize terminology</h3>
+        <p>
+          Terms from different courses do not clearly “belong” anywhere, so they remain separate, fragile, and easily confused.
+        </p>
+
+        <h3>2. Without stable terms, they cannot build schema</h3>
+        <p>
+          A schema is a compressed organizational pattern that ties multiple terms and relationships together.
+          If the underlying vocabulary is shaky and scattered, the schema never forms.
+        </p>
+
+        <h3>3. Without schema, they cannot form robust causal relationships</h3>
+        <p>
+          Students may remember snippets like “ICS is anti-inflammatory,” but they cannot reliably run a mechanistic chain (Disease → Mechanism → Exposure → Response) for a real case.
+          Every problem feels like starting from scratch.
+        </p>
+
+        <h3>4. Without causal subgraphs, they cannot build early scripts</h3>
+        <p>
+          Illness scripts, therapy scripts, and MTP scripts depend on having <strong>reusable mechanistic patterns</strong> plus clinical context.
+          If causal understanding is fragmented, scripts do not consolidate—students just memorize more lists.
+        </p>
+
+        <p>
+          The superficial problem—“students cannot integrate”—is actually a <strong>working memory overload problem</strong>.
+          We are asking them to integrate before we have given them tools to <strong>chunk and compress</strong> what they are learning.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>How DiMER Solves This Problem</h2>
+        <p>
+          DiMER (Disease → Mechanism → Exposure → Response) directly targets the cognitive load bottleneck by providing a <strong>simple, repeated structure</strong> that enables systematic chunking at every level.
+        </p>
+
+        <h3>Stage 1: Anchoring terminology</h3>
+        <ul>
+          <li>Each term is tagged to its <strong>home in the DiMER chain</strong>: Disease terms in 502, Mechanism terms in 503, Exposure terms in 512.</li>
+          <li>Terms are no longer floating—they have a place. This reduces scatter and stabilizes foundational vocabulary.</li>
+        </ul>
+
+        <h3>Stage 2: Building causal links</h3>
+        <ul>
+          <li>Students practice explicit <strong>D→M, M→E, and E→R links</strong> via three hypotheses each week.</li>
+          <li>Each link <strong>compresses two separate chunks into one mini-chunk</strong>: “ICS ↓ cytokines” becomes a single, retrievable unit.</li>
+        </ul>
+
+        <h3>Stage 3: Forming mechanistic subgraphs</h3>
+        <ul>
+          <li>Weekly cases require students to <strong>run the full D→M→E→R chain</strong> for one disease.</li>
+          <li>With repetition, these multi-step causal networks become <strong>single larger chunks</strong> in working memory (for example, “ICS–LABA mechanism in type 2 asthma”).</li>
+        </ul>
+
+        <h3>Stage 4: Developing schema</h3>
+        <ul>
+          <li>DiMER itself becomes a <strong>high-level schema</strong> (“every therapy story is D→M→E→R”) that students apply repeatedly across diseases.</li>
+          <li>A schema retrieved from long-term memory <strong>occupies only one slot</strong> in working memory, even though it encodes many relationships.</li>
+          <li>This frees cognitive capacity for reasoning and problem-solving.</li>
+        </ul>
+
+        <h3>Stage 5: Consolidating scripts</h3>
+        <ul>
+          <li>Repeated, varied cases using the <strong>D→M→E→R scaffold</strong> accelerate formation of:
+            <ul class="inline-list">
+              <li>Illness scripts (D + parts of M),</li>
+              <li>Therapy scripts (D→M→E→R for standard regimens),</li>
+              <li>MTP scripts (characteristic breaks in the chain).</li>
+            </ul>
+          </li>
+          <li>A mature script is a <strong>very large chunk</strong> retrieved as a unit; experts activate it, then selectively unpack details as needed.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>The Result: Integration Becomes Cognitively Possible</h2>
+        <p>
+          DiMER does not just tell students to “integrate”—it gives them a <strong>cognitive tool that makes integration possible</strong>.
+        </p>
+        <ul>
+          <li>Terms are anchored, not scattered.</li>
+          <li>Links become automatic through practice.</li>
+          <li>Mechanistic subgraphs form and compress.</li>
+          <li>Schema and scripts consolidate naturally.</li>
+        </ul>
+        <p>
+          At each stage, <strong>cognitive load decreases</strong> because students are working with progressively larger, more integrated chunks.
+          What starts as 15 separate facts competing for working memory space becomes a single, retrievable clinical pattern.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why This Matters for Faculty</h2>
+        <p>
+          When colleagues say, “Students struggle to integrate basic and clinical sciences,” they are often diagnosing the symptom, not the cause.
+          The cause is frequently <strong>cognitive overload from unstructured parallel content</strong>.
+        </p>
+        <p>
+          DiMER is not a Band-Aid or a motivational slogan. It is a <strong>systematic instructional design</strong> grounded in cognitive load theory that:
+        </p>
+        <ul>
+          <li>Reduces the number of <strong>unconnected chunks</strong> students must juggle.</li>
+          <li>Provides a <strong>repeated scaffold</strong> that enables automatic chunking through practice.</li>
+          <li>Accelerates the <strong>natural progression</strong> from novice (many small chunks) to expert (few large chunks).</li>
+        </ul>
+        <p>
+          The question is not “Should we integrate these courses?” The question is:
+        </p>
+        <div class="blockquote">
+          <strong>“How do we give students the cognitive tools to actually do the integration we are asking for?”</strong>
+        </div>
+        <p>
+          DiMER is our answer.
+        </p>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">Key Takeaway</div>
+        <p>
+          Right now, students cannot integrate three parallel content streams because we unintentionally overload their working memory with unstructured information.
+          DiMER’s job is to provide a simple, repeated structure—D→M→E→R with three hypotheses—that lets students compress terminology into links, links into mechanisms, mechanisms into schema, and schema into scripts.
+          This makes integration cognitively possible, not just aspirational.
+        </p>
+      </div>
+
+      <p class="footer-note">
+        This explainer is intended for instructors who want to understand the cognitive science argument behind DiMER and why “integration” requires a deliberate reasoning structure, not just more coordination meetings.
+      </p>
+    </article>
+  </div>
+</body>
+</html>

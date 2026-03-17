@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Cognitive Transformations: The Foundation for DiMER Success</title>
+  <style>
+    :root {
+      /* Typography */
+      --font-heading: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+      /* Neutral colors */
+      --white: #FFFFFF;
+      --gray-050: #FAFAFA;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --text-default: #1F2937;
+
+      /* PHCY 502 */
+      --phcy502-fill: #FFF4B8;
+      --phcy502-text: #A67C00;
+
+      /* PHCY 503 */
+      --phcy503-fill: #DDEFD8;
+      --phcy503-text: #2F6B2F;
+
+      /* PHCY 512 */
+      --phcy512-fill: #DCEFFD;
+      --phcy512-text: #13294B;
+
+      /* Supporting */
+      --card-radius: 12px;
+      --page-maxw: 980px;
+      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--gray-050);
+      color: var(--text-default);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: var(--page-maxw);
+      margin: 0 auto;
+      padding: 28px 24px 56px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 26px 22px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--gray-700);
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gray-700);
+      margin: 28px 0 12px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin: 20px 0 10px;
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--gray-500);
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    p {
+      margin: 0 0 14px;
+      font-size: 0.98rem;
+    }
+
+    ul {
+      margin: 8px 0 14px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+      font-size: 0.98rem;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+
+    .jump-links {
+      background: var(--gray-100);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 16px;
+    }
+
+    .jump-links p {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-500);
+      margin-bottom: 8px;
+    }
+
+    .jump-links a {
+      display: inline-block;
+      margin-right: 14px;
+      margin-bottom: 4px;
+      color: var(--phcy512-text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .jump-links a:hover {
+      text-decoration: underline;
+    }
+
+    .transformation {
+      border-radius: 10px;
+      padding: 16px 18px 14px;
+      margin-bottom: 18px;
+      border-left-width: 5px;
+      border-left-style: solid;
+      background: var(--gray-100);
+      border-left-color: var(--gray-500);
+    }
+
+    .transformation h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .section-label {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 6px;
+    }
+
+    .why-section {
+      background: var(--gray-050);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+
+    .why-section .section-label {
+      font-size: 0.75rem;
+    }
+
+    .references {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 2px solid var(--gray-200);
+    }
+
+    .references p {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        padding: 18px 14px 40px;
+      }
+      .card {
+        padding: 20px 18px 18px;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--white);
+      }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+      .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Student Cognitive Transformations</h1>
+      <p class="subtitle">The Foundation for DiMER Success</p>
+
+      <p class="lead">
+        This document articulates <strong>what must change inside students' minds</strong> during PHCY 502–503–512 for our theory of pedagogy to succeed. These aren't just learning objectives—they describe fundamental cognitive transformations that enable students to become medication therapy experts.
+      </p>
+
+      <p>
+        Understanding these transformations helps us see why DiMER operationalization matters: it's not about rearranging content, but about creating the conditions for these mental shifts to occur.
+      </p>
+
+      <div class="jump-links">
+        <p>Quick Navigation</p>
+        <a href="#transformations">The Seven Transformations</a>
+        <a href="#why-dimer">Why DiMER Enables These</a>
+        <a href="#references">References</a>
+      </div>
+    </section>
+
+    <section class="card" id="transformations">
+      <h2>The Seven Transformations</h2>
+
+      <div class="transformation">
+        <h3>1. From sparse facts → dense, layered causal networks</h3>
+        
+        <div class="section-label">What has to happen</div>
+        <p>
+          Students must accumulate enough nodes (physiology, pathophysiology, targets, mechanisms, devices) to make pattern formation possible. More importantly, they must <strong>densify the edges</strong>: they start to see multi-step chains (e.g., irritant → epithelial injury → cytokines → cell recruitment → remodeling → symptom). They begin to <strong>stack levels</strong> (molecule ↔ cell ↔ tissue ↔ organ ↔ patient), not just operate within one.
+        </p>
+
+        <div class="why-section">
+          <div class="section-label">Why this matters for expertise</div>
+          <p>
+            Script theory presumes a <strong>rich underlying causal network</strong> that can later be encapsulated[1]. Without this density and layering, students don't develop robust illness or therapy scripts; they just acquire fragile "surface features" that don't transfer to new cases.
+          </p>
+        </div>
+
+        <div class="section-label">Pedagogical implication</div>
+        <p>
+          We need repeated exposure to the same disease mechanisms from multiple angles (pathophysiology explaining causation, drug action explaining intervention points, pharmaceutics explaining delivery constraints) to build network density.
+        </p>
+      </div>
+
+      <div class="transformation">
+        <h3>2. From local links → tractable subgraphs students can mentally run</h3>
+        
+        <div class="section-label">What has to happen</div>
+        <p>
+          Students must move from "A causes B" snippets to <strong>small, runnable subgraphs</strong> they can traverse forward and backward. For example, given a drug, they can mentally run: target modulation → pathway change → organ effect → symptom change → biomarker change. Given a lab abnormality, they can "back-chain" to plausible nodes upstream.
+        </p>
+
+        <div class="why-section">
+          <div class="section-label">Why this matters</div>
+          <p>
+            This is the <strong>engine of mechanistic reasoning</strong>: being able to simulate "if I perturb here, what happens there?" It underpins the pharmacotherapeutic hypothesis and the later M→E and E→R reasoning chains.
+          </p>
+        </div>
+
+        <div class="section-label">Pedagogical implication</div>
+        <p>
+          Case-based instruction must explicitly walk students through these causal chains in both directions, not just present them as static diagrams.
+        </p>
+      </div>
+
+      <div class="transformation">
+        <h3>3. From unstructured knowledge → encapsulated, retrievable chunks</h3>
+        
+        <div class="section-label">What has to happen</div>
+        <p>
+          With repetition, students begin to <strong>encapsulate</strong> causal micro-circuits into recognizable units: a "COPD airway script," an "RA synovitis script," an "ICS–LABA script." These chunks are <strong>indexed</strong> by multiple cues (symptom pattern, key lab, drug class), so they can be retrieved rapidly. Internally, the chunk still contains mechanistic detail that can be unpacked when needed.
+        </p>
+
+        <div class="why-section">
+          <div class="section-label">Why this matters</div>
+          <p>
+            Encapsulation is the mechanism by which experts are both <strong>fast and analytic</strong>: they retrieve a script quickly, then unpack it when the case doesn't fit[2]. Our curriculum aims to foster early <strong>therapy scripts</strong> and <strong>MTP scripts</strong>, not just illness scripts.
+          </p>
+        </div>
+
+        <div class="section-label">Pedagogical implication</div>
+        <p>
+          We need structured repetition across weeks and courses, with explicit naming of scripts ("This is the type 2 inflammation → ICS response script") to support encapsulation.
+        </p>
+      </div>
+
+      <div class="transformation">
+        <h3>4. From content knowledge → proceduralized reasoning moves</h3>
+        
+        <div class="section-label">What has to happen</div>
+        <p>
+          Students must learn <strong>specific mental procedures</strong>, not just facts, and practice them until they're semi-automatic. Examples include:
+        </p>
+        <ul>
+          <li>"State the disease mechanism at the right level for this question"</li>
+          <li>"Write a pharmacotherapeutic hypothesis that names target, direction, and expected outcome"</li>
+          <li>"Identify where the D→M→E→R chain is most likely broken in this MTP"</li>
+        </ul>
+        <p>
+          They start to recognize: "Ah, this is a <em>D→M</em> question" vs "this is an <em>M→E</em> question."
+        </p>
+
+        <div class="why-section">
+          <div class="section-label">Why this matters</div>
+          <p>
+            Expertise is not just <strong>having</strong> knowledge; it's <strong>knowing how to deploy</strong> it via repeatable cognitive operations. If these moves don't proceduralize, they remain clunky and fragile, especially under time pressure[3].
+          </p>
+        </div>
+
+        <div class="section-label">Pedagogical implication</div>
+        <p>
+          We must teach and practice explicit reasoning frameworks (Pharmacotherapeutic Hypothesis, Target–Barrier–Exposure–Clinical Fit, D→M→E→R) repeatedly until students internalize the procedures.
+        </p>
+      </div>
+
+      <div class="transformation">
+        <h3>5. From single-discipline silos → cross-discipline mappings</h3>
+        
+        <div class="section-label">What has to happen</div>
+        <p>
+          Students need to build <strong>stable mappings</strong> between pathophysiology categories ↔ target classes ↔ drug mechanisms ↔ delivery constraints. For example, "type 2–high inflammation" isn't just a label; it maps to:
+        </p>
+        <ul>
+          <li>specific cytokines (502)</li>
+          <li>ICS mechanism (503)</li>
+          <li>clinical phenotypes (502)</li>
+          <li>device considerations for inhaled delivery to inflamed airways (512)</li>
+        </ul>
+
+        <div class="why-section">
+          <div class="section-label">Why this matters</div>
+          <p>
+            This is the cognitive <strong>integration</strong> piece: the same mental object is linked to concepts learned across all three courses. Without these cross-links, each course builds its own mini-network; nothing bridges them.
+          </p>
+        </div>
+
+        <div class="section-label">Pedagogical implication</div>
+        <p>
+          Shared weekly cases with explicit cross-course connections are essential. Each instructor must point to what the other courses contribute to the complete picture.
+        </p>
+      </div>
+
+      <div class="transformation">
+        <h3>6. From descriptive to counterfactual and conditional reasoning</h3>
+        
+        <div class="section-label">What has to happen</div>
+        <p>
+          Students must start thinking in <strong>"what if" and "under what conditions"</strong> rather than "what is." Examples:
+        </p>
+        <ul>
+          <li>"If adherence were perfect, and we still see poor control, which node in D→M→E→R is most suspect?"</li>
+          <li>"If target engagement is adequate but response is absent, then either my D→M hypothesis is wrong or there is downstream adaptation"</li>
+        </ul>
+        <p>
+          They get comfortable with <strong>conditional claims</strong> and reasoning through scenarios.
+        </p>
+
+        <div class="why-section">
+          <div class="section-label">Why this matters</div>
+          <p>
+            Counterfactual reasoning is central to <strong>diagnosing MTPs</strong> and revising hypotheses. It's also what distinguishes a script that is merely associative from one that is truly <strong>causal and revisable</strong>[4].
+          </p>
+        </div>
+
+        <div class="section-label">Pedagogical implication</div>
+        <p>
+          In-class activities must include "what if" scenarios, failure-mode analysis, and hypothesis revision exercises, not just straightforward case presentations.
+        </p>
+      </div>
+
+      <div class="transformation">
+        <h3>7. From teacher as authority → self-monitoring epistemic agent</h3>
+        
+        <div class="section-label">What has to happen</div>
+        <p>
+          Students begin to <strong>notice the limits</strong> of their own scripts ("I have the illness script, but I don't have an exposure–response sense here"). They practice <strong>updating</strong>: when the observed response doesn't match their E→R expectation, they revise something upstream rather than just memorizing an exception. They start to see uncertainty and variation as <em>signals</em> to refine their networks, not as noise.
+        </p>
+
+        <div class="why-section">
+          <div class="section-label">Why this matters</div>
+          <p>
+            This is the seed of <strong>adaptive expertise</strong> and MTP reasoning in messy real-world cases. It's also the basis for later Bayesian framing (priors, likelihoods, posterior updates).
+          </p>
+        </div>
+
+        <div class="section-label">Pedagogical implication</div>
+        <p>
+          We must create safe spaces for students to articulate uncertainty, revise their thinking aloud, and explain <em>why</em> they're changing their hypothesis—not just "get the right answer."
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="why-dimer">
+      <h2>Why DiMER Operationalization Enables These Transformations</h2>
+
+      <h3>Dense networks require multi-angle exposure</h3>
+      <p>
+        When pathophysiology, drug action, and pharmaceutics all address the same disease mechanism from their distinctive perspectives within the same week, students build richer, more densely connected causal networks than if each course operates in isolation.
+      </p>
+
+      <h3>Cross-discipline mappings require shared cases</h3>
+      <p>
+        You cannot build stable bridges between pathophysiology concepts, drug mechanisms, and delivery constraints without concrete cases that demand integration. The shared weekly case is the scaffold.
+      </p>
+
+      <h3>Proceduralized reasoning requires repeated practice</h3>
+      <p>
+        When students encounter the same reasoning frameworks (Pharmacotherapeutic Hypothesis, Target–Barrier–Exposure–Clinical Fit) week after week across different disease contexts, these procedures become internalized cognitive tools.
+      </p>
+
+      <h3>Counterfactual reasoning requires case variation</h3>
+      <p>
+        By seeing how the same mechanistic framework applies to asthma vs COPD, or how delivery changes when we move from inhalers to injections, students learn to reason conditionally and counterfactually rather than just memorizing prototypes.
+      </p>
+    </section>
+
+    <section class="card references" id="references">
+      <h2>References</h2>
+      <p>[1] Schmidt, H. G., & Boshuizen, H. P. A. (1993). On acquiring expertise in medicine. <em>Educational Psychology Review</em>, 5(3), 205–221.</p>
+      <p>[2] Schmidt, H. G., Norman, G. R., & Boshuizen, H. P. A. (1990). A cognitive perspective on medical expertise: Theory and implications. <em>Academic Medicine</em>, 65(10), 611–621.</p>
+      <p>[3] Ericsson, K. A., Krampe, R. T., & Tesch-Römer, C. (1993). The role of deliberate practice in the acquisition of expert performance. <em>Psychological Review</em>, 100(3), 363–406.</p>
+      <p>[4] Sloman, S., & Lagnado, D. (2015). Causality in thought. <em>Annual Review of Psychology</em>, 66, 223–247.</p>
+    </section>
+  </main>
+</body>
+</html>

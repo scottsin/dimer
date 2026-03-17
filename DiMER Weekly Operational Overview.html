@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DiMER Operationalization: Weekly Rhythm</title>
+  <style>
+    :root {
+      /* Typography */
+      --font-heading: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+      /* Neutral colors */
+      --white: #FFFFFF;
+      --gray-050: #FAFAFA;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --text-default: #1F2937;
+
+      /* PHCY 502 */
+      --phcy502-fill: #FFF4B8;
+      --phcy502-text: #A67C00;
+
+      /* PHCY 503 */
+      --phcy503-fill: #DDEFD8;
+      --phcy503-text: #2F6B2F;
+
+      /* PHCY 512 */
+      --phcy512-fill: #DCEFFD;
+      --phcy512-text: #13294B;
+
+      /* Supporting */
+      --card-radius: 12px;
+      --page-maxw: 980px;
+      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--gray-050);
+      color: var(--text-default);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: var(--page-maxw);
+      margin: 0 auto;
+      padding: 28px 24px 56px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 26px 22px;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--gray-700);
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--gray-500);
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      margin: 0 0 18px;
+      font-size: 1rem;
+    }
+
+    .block {
+      border-radius: 10px;
+      padding: 14px 16px 12px;
+      margin-bottom: 12px;
+      border-left-width: 5px;
+      border-left-style: solid;
+      background: var(--gray-100);
+      border-left-color: var(--gray-500);
+    }
+
+    .block-502 {
+      background: var(--phcy502-fill);
+      border-left-color: var(--phcy502-text);
+    }
+
+    .block-503 {
+      background: var(--phcy503-fill);
+      border-left-color: var(--phcy503-text);
+    }
+
+    .block-512 {
+      background: var(--phcy512-fill);
+      border-left-color: var(--phcy512-text);
+    }
+
+    .block-label {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: var(--gray-500);
+    }
+
+    .block-502 .block-label {
+      color: var(--phcy502-text);
+    }
+
+    .block-503 .block-label {
+      color: var(--phcy503-text);
+    }
+
+    .block-512 .block-label {
+      color: var(--phcy512-text);
+    }
+
+    .block p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        padding: 18px 14px 40px;
+      }
+      .card {
+        padding: 20px 18px 18px;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--white);
+      }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+      .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>DiMER Operationalization: Weekly Rhythm</h1>
+      <p class="subtitle">
+        How PHCY 502, 503, and 512 share a common weekly case while preserving each course’s core strengths.
+      </p>
+
+      <p class="lead">
+        The weekly rhythm operationalizes DiMER by having each course contribute its distinctive expertise to a shared clinical case, with minimal disruption to current successful practices.
+      </p>
+
+      <div class="block block-502">
+        <div class="block-label">PHCY 502 – Pathophysiology sets the context</div>
+        <p>
+          Pathophysiology sets the clinical context. Each week begins with a patient — their presentation, symptoms, signs, and diagnostic findings. From that starting point, pathophysiology instruction proceeds as it does now: building the mechanistic illness script that explains what's broken, why it's broken, and how that brokenness generates the observable clinical pattern. The only change is bookending — the same clinical experts who introduce the case return at week's end to close the loop and show how all the pieces integrate.
+        </p>
+      </div>
+
+      <div class="block block-503">
+        <div class="block-label">PHCY 503 – Drug Action deepens mechanism</div>
+        <p>
+          Drug Action deepens the mechanistic foundation. The key shift is increased emphasis on the cellular and molecular details of disease mechanisms, particularly those features that are targets for pharmacologic intervention. This creates tighter coupling between the "what's broken" story from pathophysiology and the "how drugs fix it" story that Drug Action has always told. The remainder of Drug Action instruction — drug classes, specific exemplars (brand–generic), FDA‑approved indications, targets, and mechanisms — continues as it does now.
+        </p>
+      </div>
+
+      <div class="block block-512">
+        <div class="block-label">PHCY 512 – Pharmaceutics sharpens delivery</div>
+        <p>
+          Pharmaceutics sharpens its clinical relevance. Rather than teaching foundational biopharmaceutics principles in isolation, those concepts are woven into weekly case applications where their importance is immediately visible. Students learn to reason about where a drug needs to go, which anatomical and physiologic barriers stand between the product and that target, what kind of exposure is required over time, and how product and device features must fit the realities of patient use. Across different topics and dosage forms, the remainder of pharmaceutics instruction — comparative product characteristics, performance and use requirements, and practical problem-solving — continues as it does now, but sharpened by the focusing lens of the shared case and a reusable delivery‑reasoning framework.
+        </p>
+      </div>
+
+      <div class="block">
+        <div class="block-label">Shared integrative benefit</div>
+        <p>
+          The elegance of this approach is that it respects existing strengths while creating new connections. Each course retains what it does well, but gains clarity about how its contribution fits into the larger story of understanding and solving medication therapy problems.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

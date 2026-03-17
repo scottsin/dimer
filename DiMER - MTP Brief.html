@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MTP Scripts and Causal Mechanisms: A Faculty Brief</title>
+  <style>
+    :root {
+      /* Typography */
+      --font-heading: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+      /* Neutrals */
+      --white: #FFFFFF;
+      --gray-050: #FAFAFA;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --text-default: #1F2937;
+
+      /* Accent (can align with DiMER/PHCY colors if desired) */
+      --accent: #0ea5e9;
+
+      /* Layout */
+      --page-maxw: 980px;
+      --card-radius: 12px;
+      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--gray-050);
+      color: var(--text-default);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: var(--page-maxw);
+      margin: 0 auto;
+      padding: 28px 24px 56px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 26px 22px;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--gray-700);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 16px 0 8px;
+    }
+
+    .subtitle {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--gray-500);
+      margin-bottom: 10px;
+    }
+
+    .meta-line {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      margin-bottom: 14px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 0.98rem;
+    }
+
+    ul {
+      margin: 6px 0 12px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+      font-size: 0.96rem;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+
+    .section-label {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 4px;
+    }
+
+    .jump-links {
+      background: var(--gray-100);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 10px;
+    }
+
+    .jump-links p {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-500);
+      margin-bottom: 6px;
+    }
+
+    .jump-links a {
+      display: inline-block;
+      margin-right: 14px;
+      margin-bottom: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .jump-links a:hover {
+      text-decoration: underline;
+    }
+
+    .callout {
+      border-radius: 10px;
+      padding: 12px 14px 10px;
+      margin: 10px 0 12px;
+      border-left: 4px solid var(--accent);
+      background: var(--gray-100);
+    }
+
+    .callout p {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 14px;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--gray-200);
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--gray-100);
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+
+    .references p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        padding: 18px 14px 40px;
+      }
+      .card {
+        padding: 20px 18px 18px;
+      }
+      table, th, td {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--white);
+      }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+      .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <!-- Intro -->
+    <section class="card">
+      <h1>MTP Scripts and Causal Mechanisms</h1>
+      <p class="subtitle">A Faculty Brief for DiMER-Aligned Teaching</p>
+      <p class="meta-line">Purpose: Brown-bag discussion handout for faculty colleagues • Date: March 4, 2026</p>
+
+      <p>
+        This brief makes the case that Medication Therapy Problems (MTPs) are the pharmacist’s functional equivalent of the physician’s diagnosis and shows how DiMER and related frameworks support the development of expert-level MTP scripts.
+      </p>
+
+      <div class="jump-links">
+        <p>Quick navigation</p>
+        <a href="#claim">The claim</a>
+        <a href="#model">The Schmidt &amp; Boshuizen model</a>
+        <a href="#mtp-scripts">MTP scripts</a>
+        <a href="#implication">What must be encapsulated</a>
+        <a href="#frameworks">How DiMER, Bayes, and MDP help</a>
+        <a href="#ask">The ask for teaching</a>
+        <a href="#references">Key references</a>
+      </div>
+    </section>
+
+    <!-- The Claim -->
+    <section class="card" id="claim">
+      <h2>The Claim</h2>
+      <p>
+        Medication Therapy Problems are the pharmacist’s functional equivalent of the physician’s diagnosis.
+      </p>
+      <p>
+        Just as physicians identify and name disease states, pharmacists identify and name failures or risks in the medication–patient system: wrong indication, ineffective therapy, unsafe therapy, and nonadherence.
+      </p>
+      <p>
+        This is not a loose metaphor; it maps directly onto one of the most well-validated models of diagnostic expertise development in health professions education.
+      </p>
+    </section>
+
+    <!-- Schmidt & Boshuizen Model -->
+    <section class="card" id="model">
+      <h2>The Schmidt &amp; Boshuizen Model of Diagnostic Expertise</h2>
+
+      <p>
+        Henk Schmidt and Henny Boshuizen described a predictable sequence in the development of medical diagnostic expertise.
+      </p>
+
+      <div class="callout">
+        <div class="section-label">Progression of expertise</div>
+        <ul>
+          <li><strong>Novices</strong> reason with detailed, unorganized biomedical knowledge, making their reasoning slow, effortful, and often inaccurate.</li>
+          <li><strong>Intermediate learners</strong> undergo knowledge encapsulation, compressing detailed mechanisms into higher-level clinical concepts.</li>
+          <li><strong>Experts</strong> use illness scripts: mental templates organized around enabling conditions, a fault, and consequences.</li>
+        </ul>
+      </div>
+
+      <p>
+        Experts activate these scripts rapidly by matching patient cues to stored patterns, and when cases are atypical they can “unpack” encapsulated mechanisms and reason deliberately.
+      </p>
+    </section>
+
+    <!-- MTP Scripts -->
+    <section class="card" id="mtp-scripts">
+      <h2>The Translation: MTP Scripts</h2>
+      <p>
+        If MTPs are the pharmacist’s diagnosis, then expert pharmacists develop MTP scripts with the same three-part structure as physician illness scripts.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Physician illness script</th>
+            <th>Pharmacist MTP script</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Enabling conditions</strong></td>
+            <td>Patient demographics, risk factors, exposures</td>
+            <td>Polypharmacy, renal impairment, cost barriers, caregiver burden, complex regimen</td>
+          </tr>
+          <tr>
+            <td><strong>Fault</strong></td>
+            <td>Core pathophysiology (for example, insulin resistance)</td>
+            <td>Specific MTP plus cause (for example, “dose too low due to failure to titrate”)</td>
+          </tr>
+          <tr>
+            <td><strong>Consequences</strong></td>
+            <td>Pattern of findings (for example, elevated A1c, fatigue)</td>
+            <td>Clinical pattern of medication failure (for example, uncontrolled A1c, recurrent exacerbations)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Critical Implication -->
+    <section class="card" id="implication">
+      <h2>The Critical Implication: What Must Be Encapsulated?</h2>
+
+      <p>
+        For MTP labels to function as expert-level diagnoses rather than checklist categories, each label must carry an implicit causal model.
+      </p>
+      <p>
+        That requirement tells us what foundational science to prioritize in the curriculum.
+      </p>
+
+      <h3>Indication MTPs</h3>
+      <ul>
+        <li>Disease pathophysiology → which mechanisms must be targeted → natural history with versus without therapy.</li>
+        <li>Students must understand why a therapy is needed, not just that guidelines recommend it.</li>
+      </ul>
+
+      <h3>Effectiveness MTPs</h3>
+      <ul>
+        <li>Drug–target interaction → pharmacodynamic effect → clinical endpoint translation → dose–exposure–response relationships.</li>
+        <li>“Dose too low” must mean something mechanistic, not merely “below the guideline range.”</li>
+      </ul>
+
+      <h3>Safety MTPs</h3>
+      <ul>
+        <li>Mechanisms of toxicity and vulnerable phenotypes (renal, hepatic, pharmacogenomic).</li>
+        <li>How changes in exposure convert benefit into harm.</li>
+      </ul>
+
+      <h3>Adherence MTPs</h3>
+      <ul>
+        <li>How missed-dose patterns map to effective exposure and outcome risk, including PK/PD “forgiveness” versus “fragility.”</li>
+        <li>Behavioral and system-level determinants that shape adherence.</li>
+      </ul>
+    </section>
+
+    <!-- Frameworks -->
+    <section class="card" id="frameworks">
+      <h2>How DiMER, Bayesian Reasoning, and MDP Support MTP Scripts</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Role in MTP script development</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>DiMER</strong></td>
+            <td>
+              Builds the mechanistic “fault” substrate and structures what is broken and why, so that MTP labels such as “dose too low” or “needs additional therapy” rest on causal reasoning rather than rote classification.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Bayesian reasoning</strong></td>
+            <td>
+              Makes MTP script activation explicit by formalizing how pharmacists move from vague concern to specific MTP: priors (which MTPs are common in this patient type?), discriminating cues (labs, refill data, side effects), and updated probability across competing MTP hypotheses.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>MDP framing</strong></td>
+            <td>
+              Extends the MTP “diagnosis” into a dynamic management plan where state = patient plus MTP profile, actions = dose adjustment, drug change, counseling, or device switch, and transitions = expected outcomes over time.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- What This Is Not -->
+    <section class="card">
+      <h2>What This Is Not</h2>
+
+      <ul>
+        <li><strong>Not replacing clinical judgment.</strong> The goal is to build toward expert-level pattern recognition, not away from it.</li>
+        <li><strong>Not requiring formal Bayesian math at the bedside.</strong> We teach the logic of probabilistic updating, not the calculations.</li>
+        <li><strong>Not overcomplicating simple cases.</strong> These frameworks scaffold novice reasoning; experts will eventually run MTP scripts automatically, just as physicians run illness scripts.</li>
+      </ul>
+    </section>
+
+    <!-- The Ask -->
+    <section class="card" id="ask">
+      <h2>The Ask for Teaching</h2>
+
+      <p>
+        Teach foundational science as causal stories about indication, effectiveness, safety, and adherence, rather than as decontextualized detail.
+      </p>
+      <p>
+        Every mechanism we teach should connect to an MTP-relevant lever that students will later use at the bedside.
+      </p>
+
+      <div class="callout">
+        <p>
+          When “dose too low” carries an entire causal network—disease mechanism, drug mechanism, patient context, and expected trajectory—it becomes an encapsulated expert script. Without that, it remains a checkbox.
+        </p>
+      </div>
+    </section>
+
+    <!-- References -->
+    <section class="card references" id="references">
+      <h2>Key References</h2>
+      <p>1. Schmidt, H. G., &amp; Boshuizen, H. P. A. (1993). On acquiring expertise in medicine. <em>Educational Psychology Review</em>, 5(3), 205–221.</p>
+      <p>2. Boshuizen, H. P. A., &amp; Schmidt, H. G. (1992). On the role of biomedical knowledge in clinical reasoning by experts, intermediates and novices. <em>Cognitive Science</em>, 16(2), 153–184.</p>
+      <p>3. Rikers, R. M. J. P., et al. (2000). Knowledge encapsulation and the intermediate effect. <em>Contemporary Educational Psychology</em>, 25(2), 150–166.</p>
+      <p>4. Mertens, B. J. L., et al. (2022). Clinical reasoning by pharmacists: A scoping review. <em>Research in Social and Administrative Pharmacy</em>, 19(1), 15–26.</p>
+      <p>5. Newsom, L. A., et al. (2022). Enhancing the “What” and “Why” of the Pharmacists’ Patient Care Process. <em>American Journal of Pharmaceutical Education</em>, 87(5), ajpe8963.</p>
+    </section>
+  </main>
+</body>
+</html>

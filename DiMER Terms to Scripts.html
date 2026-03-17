@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>From Terms to Scripts: How DiMER Supports Knowledge Integration and Reduces Cognitive Load</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --font-heading: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+      --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+      --white: #FFFFFF;
+      --gray-050: #FAFAFA;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --text-default: #1F2937;
+
+      --rose: #E8C7CC;
+      --brick-red: #8E2C2C;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--gray-050);
+      font-family: var(--font-body);
+      color: var(--text-default);
+      line-height: 1.5;
+    }
+
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px 24px 28px;
+    }
+
+    .card-border-top-neutral {
+      border-top: 6px solid var(--gray-700);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      margin-top: 0;
+      color: var(--gray-700);
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      margin-bottom: 1.0rem;
+    }
+
+    .abstract {
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      margin-bottom: 1.5rem;
+    }
+
+    .course-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      margin-bottom: 0.75rem;
+      background: var(--gray-100);
+      color: var(--gray-700);
+    }
+
+    p {
+      margin: 0 0 0.9rem;
+      font-size: 0.97rem;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .section {
+      margin-top: 1.4rem;
+    }
+
+    .section h2 {
+      margin-bottom: 0.45rem;
+    }
+
+    .section h3 {
+      margin-top: 0.4rem;
+    }
+
+    ul {
+      margin: 0.35rem 0 0.9rem 1.2rem;
+      padding: 0;
+      font-size: 0.97rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    .inline-list {
+      margin-top: 0.3rem;
+    }
+
+    .callout {
+      margin-top: 1.4rem;
+      padding: 12px 14px;
+      border-left: 4px solid var(--brick-red);
+      background: var(--rose);
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: var(--gray-700);
+    }
+
+    .callout-title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-note {
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <article class="card card-border-top-neutral">
+      <div class="course-tag">
+        DiMER, Scripts &amp; Cognitive Load
+      </div>
+
+      <h1>From Terms to Scripts: How DiMER Supports Knowledge Integration and Reduces Cognitive Load</h1>
+      <p class="page-subtitle">
+        A five-stage view of how D→M→E→R helps students move from isolated facts to expert-like clinical scripts.
+      </p>
+
+      <p class="abstract">
+        <strong>Abstract.</strong> First-semester students encounter hundreds of biomedical terms across 502, 503, and 512, which quickly overloads working memory when those facts remain unstructured. This explainer shows how DiMER (Disease → Mechanism → Exposure → Response) provides a repeated scaffold that helps learners progress from individual terms to causal links, mechanistic subgraphs, schema, and finally illness, therapy, and MTP scripts. At each stage, many small chunks are compressed into larger, reusable patterns, reducing cognitive load and supporting the kind of flexible reasoning experts demonstrate in practice.
+      </p>
+
+      <div class="section">
+        <h2>The Challenge</h2>
+        <p>
+          First-semester pharmacy students encounter hundreds of biomedical terms across pathophysiology (502), drug action (503), and pharmaceutics (512).
+          Without an organizing framework, these facts remain <strong>isolated chunks</strong> in working memory—creating high cognitive load and preventing the kind of integrated, flexible reasoning experts demonstrate in practice.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>The Solution: A Five-Stage Progression</h2>
+        <p>
+          DiMER (Disease → Mechanism → Exposure → Response) accelerates the natural progression from fragmented knowledge to expert clinical reasoning by providing a <strong>repeated, explicit scaffold</strong> that students apply to every case.
+          Knowledge evolves through five distinct stages.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>1. Terms &amp; Concepts</h2>
+        <p>
+          <strong>What it is:</strong> Individual facts and labels—β₂ receptors, ICS, particle size, type 2 inflammation—learned in isolation.
+        </p>
+        <p>
+          <strong>The problem:</strong> Many separate chunks in working memory; novices struggle to hold more than 4–7 items simultaneously.
+        </p>
+        <p>
+          <strong>How DiMER helps:</strong> Each course (502, 503, 512) introduces discipline-specific terminology <strong>anchored to its primary DiMER element</strong>:
+          Disease terms in 502, Mechanism terms in 503, Exposure/delivery terms in 512.
+          Terms are not floating—they are tagged to a specific place in the causal chain.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>2. Causal Links</h2>
+        <p>
+          <strong>What it is:</strong> Simple cause–effect pairs connecting two nodes: “ICS ↓ type 2 cytokines,” “LABA → smooth muscle relaxation.”
+        </p>
+        <p>
+          <strong>Cognitive benefit:</strong> Each link <strong>reduces two chunks to one mini-chunk</strong>, lowering load if the link is well-practiced.
+        </p>
+        <p>
+          <strong>How DiMER helps:</strong> Students explicitly practice D→M, M→E, and E→R links via the <strong>three hypotheses</strong> each week, creating repeated cause–effect pairs that become automatic.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>3. Mechanistic Subgraphs</h2>
+        <p>
+          <strong>What it is:</strong> Small, <strong>runnable causal networks</strong> that students can mentally simulate:
+          “Allergen → epithelial injury → type 2 cytokines → eosinophils → airway edema → obstruction; ICS acts here, LABA acts here.”
+        </p>
+        <p>
+          <strong>Cognitive benefit:</strong> A practiced subgraph becomes <strong>a single larger chunk</strong> (for example, “ICS–LABA mechanism in type 2 asthma”), dramatically reducing the apparent element count in working memory.
+        </p>
+        <p>
+          <strong>How DiMER helps:</strong> Each week’s case requires students to <strong>run the full D→M→E→R chain</strong> for one disease, building reusable mechanistic subgraphs through structured, repeated practice.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>4. Schema</h2>
+        <p>
+          <strong>What it is:</strong> An <strong>abstracted organizational pattern</strong> that specifies slots (for example, “irritant,” “inflammatory mediator,” “target tissue,” “delivery barrier”) and typical relationships, generalizing across many cases.
+        </p>
+        <p>
+          Example: “Reversible airflow obstruction schema—smooth muscle hyperresponsiveness + inflammation + mucus → variable symptoms; responsive to bronchodilators and anti-inflammatory agents.”
+        </p>
+        <p>
+          <strong>Cognitive benefit:</strong> A schema retrieved from long-term memory <strong>occupies only one slot</strong> in working memory, even though it encodes many relationships.
+          This frees cognitive capacity for reasoning and problem-solving.
+        </p>
+        <p>
+          <strong>How DiMER helps:</strong> <strong>DiMER itself is a high-level schema</strong> (“every therapy story is D→M→E→R”) that students apply repeatedly across diseases, progressively refining their understanding of how disease, mechanism, exposure, and response relate.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>5. Scripts (Illness, Therapy, MTP)</h2>
+        <p>
+          <strong>What it is:</strong> Schema embedded in <strong>clinical context</strong>, with enabling conditions, typical trajectories, cues, actions, and outcomes.
+        </p>
+        <p>
+          Examples:
+        </p>
+        <ul>
+          <li><strong>Illness script:</strong> Eosinophilic asthma—young onset, atopy, variable symptoms, reversible obstruction, eosinophilia.</li>
+          <li><strong>Therapy script:</strong> Responds well to ICS–LABA; includes device choice, monitoring FeNO/eosinophils, step-up/down rules.</li>
+          <li><strong>MTP script:</strong> If poor control despite adherence, consider inadequate delivery (wrong device, poor technique) or steroid-poorly-responsive phenotype.</li>
+        </ul>
+        <p>
+          <strong>Cognitive benefit:</strong> A mature script is a <strong>very large chunk</strong> retrieved as a unit.
+          Experts activate a script, then selectively unpack details as needed, keeping intrinsic load low even in complex cases.
+        </p>
+        <p>
+          <strong>How DiMER helps:</strong> Repeated, varied cases using the <strong>D→M→E→R scaffold</strong> accelerate formation of:
+        </p>
+        <ul>
+          <li>Illness scripts (D + parts of M),</li>
+          <li>Therapy scripts (D→M→E→R for standard regimens),</li>
+          <li>MTP scripts (characteristic breaks in the D→M→E→R chain).</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Why This Matters: Cognitive Load Theory</h2>
+        <p>
+          <strong>Cognitive load theory</strong> tells us that working memory capacity is limited.
+          Novices juggling many separate facts quickly hit overload.
+          Experts, by contrast, work with <strong>large, integrated chunks</strong> stored in long-term memory, freeing working memory for reasoning.
+        </p>
+        <p>
+          DiMER systematically supports this transition.
+        </p>
+        <ul>
+          <li>At each stage, students <strong>practice the same reasoning structure</strong> (D→M→E→R + three hypotheses) on new content.</li>
+          <li>Through repetition and variation, <strong>small chunks combine into larger ones</strong>.</li>
+          <li>What starts as “many separate facts” becomes <strong>a single, retrievable clinical pattern</strong>.</li>
+        </ul>
+        <p>
+          The result: students can think like experts sooner, handling complex cases without cognitive overload—because they are working with integrated scripts, not isolated facts.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>The Bottom Line</h2>
+        <p>
+          DiMER is not just a mnemonic or a content organizer.
+          It is a <strong>deliberate instructional design</strong> grounded in how expertise develops.
+          By providing a consistent, repeated scaffold across three foundational courses, we help students build the <strong>causal networks, schema, and scripts</strong> that define expert clinical reasoning—while systematically reducing cognitive load at every stage.
+        </p>
+        <p>
+          When colleagues ask, “How does this help students learn?”, the answer is clear:
+          <strong>it accelerates the natural progression from fragmented knowledge to integrated expertise by making the structure of expert thinking visible, teachable, and practiced from day one.</strong>
+        </p>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">Key Takeaway</div>
+        <p>
+          DiMER links what we already teach into a simple D→M→E→R pattern that students use every week. Over time, this turns hundreds of isolated terms into a smaller set of reusable clinical scripts, reducing cognitive load and enabling more expert-like reasoning much earlier in the curriculum.
+        </p>
+      </div>
+
+      <p class="footer-note">
+        This document is designed for instructors who want to understand why DiMER focuses so much on repeated structure and scripts, not just additional content.
+      </p>
+    </article>
+  </div>
+</body>
+</html>
